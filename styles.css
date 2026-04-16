@@ -1,0 +1,58 @@
+/* Neon CTA, marquees e menu mobile */
+
+.btn-neon {
+  background-color: #00ff41;
+  box-shadow: 0 0 18px rgba(38, 255, 59, 0.55), 0 0 36px rgba(0, 255, 65, 0.2);
+  transition: filter 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-neon:hover {
+  filter: brightness(1.06);
+  box-shadow: 0 0 22px rgba(38, 255, 59, 0.65), 0 0 44px rgba(0, 255, 65, 0.25);
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+
+.marquee-ticker {
+  animation: marquee-scroll 24s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .marquee-ticker {
+    animation: none;
+    justify-content: center;
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .main-nav.main-nav--open {
+    max-height: min(70vh, 24rem);
+    opacity: 1;
+    pointer-events: auto;
+    padding-bottom: 0.5rem;
+  }
+}
+
+.nav-toggle--open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.nav-toggle--open span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle--open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}

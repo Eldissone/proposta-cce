@@ -1,0 +1,171 @@
+/* Efeitos de scroll — reveais, parallax, máscara, barra de progresso */
+
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  z-index: 9998;
+  pointer-events: none;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+#scroll-progress__bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #00ff41, #ec9f05, #ff4e00);
+  transition: width 0.06s linear;
+  box-shadow: 0 0 12px rgba(0, 255, 65, 0.45);
+}
+
+/* Estado inicial: elementos com scroll trigger */
+[data-scroll] {
+  --reveal-delay: 0ms;
+  transition:
+    opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+    clip-path 1s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay);
+  will-change: opacity, transform, filter, clip-path;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-scroll] {
+    transition: none;
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    clip-path: none !important;
+  }
+}
+
+[data-scroll="fade"] {
+  opacity: 0;
+  transform: translateY(2rem);
+}
+
+[data-scroll="fade"].is-inview {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-scroll="slide-left"] {
+  opacity: 0;
+  transform: translateX(3rem);
+}
+
+[data-scroll="slide-left"].is-inview {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+[data-scroll="slide-right"] {
+  opacity: 0;
+  transform: translateX(-3rem);
+}
+
+[data-scroll="slide-right"].is-inview {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+[data-scroll="slide-up"] {
+  opacity: 0;
+  transform: translateY(2.5rem);
+}
+
+[data-scroll="slide-up"].is-inview {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-scroll="zoom"] {
+  opacity: 0;
+  transform: scale(0.92);
+}
+
+[data-scroll="zoom"].is-inview {
+  opacity: 1;
+  transform: scale(1);
+}
+
+[data-scroll="blur"] {
+  opacity: 0;
+  filter: blur(14px);
+  transform: translateY(1.25rem);
+}
+
+[data-scroll="blur"].is-inview {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+/* Reveal por máscara (clip-path) */
+[data-scroll="mask"] {
+  opacity: 1;
+  clip-path: inset(0 100% 0 0);
+}
+
+[data-scroll="mask"].is-inview {
+  clip-path: inset(0 0 0 0);
+}
+
+[data-scroll="mask-up"] {
+  opacity: 1;
+  clip-path: inset(100% 0 0 0);
+}
+
+[data-scroll="mask-up"].is-inview {
+  clip-path: inset(0 0 0 0);
+}
+
+/* Parallax: movido via --parallax-y no JS */
+[data-parallax] {
+  will-change: transform;
+}
+
+.hero-parallax-img {
+  transform: translate3d(0, var(--parallax-y, 0px), 0) scale(1.08);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-parallax] {
+    transform: none !important;
+  }
+
+  .hero-parallax-img {
+    transform: none;
+  }
+}
+
+/* Faixa horizontal (snap) */
+.se-horizontal__scroller {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(197, 160, 89, 0.5) transparent;
+  -webkit-overflow-scrolling: touch;
+}
+
+.se-horizontal__scroller::-webkit-scrollbar {
+  height: 6px;
+}
+
+.se-horizontal__scroller::-webkit-scrollbar-thumb {
+  background: rgba(197, 160, 89, 0.45);
+  border-radius: 999px;
+}
+
+/* Sticky lateral (ingressos) */
+.scroll-sticky-panel {
+  position: sticky;
+  top: calc(4.5rem + 12px);
+}
+
+@media (max-width: 1023px) {
+  .scroll-sticky-panel {
+    position: relative;
+    top: auto;
+  }
+}

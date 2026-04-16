@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conferência Destino 2026 | Uma Nova Estação</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              deep: "#07060c",
+              card: "#0f0d14",
+              elevated: "#16131f",
+              ink: "#0a090f",
+              bronze: "#C5A059",
+              neon: "#00FF41",
+              "neon-hover": "#26ff3b",
+              gold: {
+                DEFAULT: "#d4af37",
+                soft: "#c9a227",
+                dim: "rgba(212, 175, 55, 0.35)",
+              },
+              cream: "#f4f1ea",
+            },
+            fontFamily: {
+              display: ["Playfair Display", "Georgia", "serif"],
+              sans: ["Montserrat", "system-ui", "sans-serif"],
+            },
+            maxWidth: {
+              content: "1200px",
+              narrow: "480px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="scroll-effects.css" />
+  </head>
+  <body
+    class="font-sans bg-black text-white antialiased text-[15px] leading-relaxed md:text-base"
+  >
+    <div
+      id="scroll-progress"
+      aria-hidden="true"
+      title="Progresso de leitura"
+    >
+      <div
+        id="scroll-progress__bar"
+        role="progressbar"
+        aria-valuemin="0"
+        aria-valuemax="100"
+        aria-valuenow="0"
+        aria-label="Progresso de scroll na página"
+      ></div>
+    </div>
+    <header
+      class="sticky top-0 z-[100] border-b border-white/10 bg-black/90 backdrop-blur-md"
+    >
+      <div
+        class="mx-auto flex min-h-[4.5rem] w-full max-w-content items-center justify-between gap-4 px-4 sm:px-5 md:px-6"
+      >
+        <a
+          href="#"
+          class="font-sans text-sm font-bold uppercase tracking-[0.2em] text-white no-underline hover:no-underline sm:text-base"
+        >
+          Conferência <span class="text-bronze">2026</span>
+        </a>
+        <nav
+          id="main-nav"
+          class="main-nav fixed inset-x-0 top-[4.5rem] z-50 flex max-h-0 flex-col overflow-hidden border-b border-white/10 bg-[#0a0a0a] opacity-0 transition-all duration-300 ease-out pointer-events-none md:static md:max-h-none md:flex-row md:items-center md:gap-6 md:border-0 md:bg-transparent md:p-0 md:opacity-100 md:pointer-events-auto lg:gap-8"
+        >
+          <a
+            class="border-b border-white/10 px-4 py-3 text-sm font-medium text-white/75 no-underline hover:bg-white/5 hover:text-white md:border-0 md:px-0 md:py-0 md:hover:bg-transparent"
+            href="#sobre"
+            >O evento</a
+          >
+          <a
+            class="border-b border-white/10 px-4 py-3 text-sm font-medium text-white/75 no-underline hover:bg-white/5 hover:text-white md:border-0 md:px-0 md:py-0 md:hover:bg-transparent"
+            href="#pregadores"
+            >Pregadores</a
+          >
+          <a
+            class="border-b border-white/10 px-4 py-3 text-sm font-medium text-white/75 no-underline hover:bg-white/5 hover:text-white md:border-0 md:px-0 md:py-0 md:hover:bg-transparent"
+            href="#ingressos"
+            >Ingressos</a
+          >
+          <a
+            class="mx-4 my-3 inline-flex items-center justify-center rounded-md bg-neon px-4 py-2.5 text-xs font-extrabold uppercase tracking-wide text-black no-underline shadow-[0_0_16px_rgba(0,255,65,0.45)] hover:brightness-110 md:mx-0 md:my-0"
+            href="#cadastro"
+            >Lista VIP</a
+          >
+        </nav>
+        <button
+          type="button"
+          id="nav-toggle"
+          class="relative z-[110] flex h-11 w-11 shrink-0 flex-col items-center justify-center gap-1.5 rounded-lg border border-white/20 bg-transparent md:hidden"
+          aria-expanded="false"
+          aria-controls="main-nav"
+          aria-label="Abrir menu"
+        >
+          <span class="h-0.5 w-5 bg-white transition-transform duration-200"></span>
+          <span class="h-0.5 w-5 bg-white transition-opacity duration-200"></span>
+          <span class="h-0.5 w-5 bg-white transition-transform duration-200"></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero: duas colunas (referência oficial) -->
+      <section class="relative min-h-[auto] overflow-hidden lg:min-h-[92vh]">
+        <div class="absolute inset-0 overflow-hidden" aria-hidden="true">
+          <img
+            src="https://images.unsplash.com/photo-1478146896981-b80fe463b330?auto=format&fit=crop&w=2400&q=80"
+            alt=""
+            width="2400"
+            height="1600"
+            class="hero-parallax-img absolute inset-0 h-[115%] w-full object-cover object-[center_70%] brightness-[0.35]"
+            fetchpriority="high"
+          />
+        </div>
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-black via-black/85 to-black/40"
+          aria-hidden="true"
+        ></div>
+        <div
+          class="pointer-events-none absolute -right-1/4 top-0 h-[85%] w-[85%] bg-[radial-gradient(ellipse_at_70%_0%,rgba(255,120,40,0.55)_0%,rgba(255,80,0,0.2)_35%,transparent_65%)]"
+          aria-hidden="true"
+        ></div>
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/70"
+          aria-hidden="true"
+        ></div>
+
+        <div
+          class="relative z-10 mx-auto grid max-w-content gap-10 px-4 py-14 sm:px-5 sm:py-16 md:px-6 lg:grid-cols-2 lg:items-center lg:gap-12 lg:py-12 xl:py-16"
+        >
+          <div class="max-w-xl lg:py-8" data-scroll-stagger data-stagger-ms="100">
+            <p
+              class="text-[11px] font-semibold uppercase tracking-[0.28em] text-white sm:text-xs"
+              data-scroll="fade"
+            >
+              Conferência 2026
+            </p>
+            <div class="mt-4" aria-label="Destino" data-scroll="fade">
+              <svg
+                class="h-12 w-auto text-white sm:h-14 md:h-16"
+                viewBox="0 0 320 56"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <text
+                  x="0"
+                  y="46"
+                  fill="currentColor"
+                  class="font-sans text-[52px] font-extrabold"
+                  style="font-family: Montserrat, sans-serif"
+                >
+                  D
+                </text>
+                <text
+                  x="42"
+                  y="46"
+                  fill="url(#destinoGrad)"
+                  style="font-family: Montserrat, sans-serif; font-size: 52px; font-weight: 800"
+                >
+                  estin
+                </text>
+                <g transform="translate(200, 2)">
+                  <circle
+                    cx="28"
+                    cy="28"
+                    r="24"
+                    stroke="url(#compassRing)"
+                    stroke-width="2"
+                    stroke-dasharray="3 4"
+                    fill="rgba(0,0,0,0.25)"
+                  />
+                  <text
+                    x="28"
+                    y="12"
+                    text-anchor="middle"
+                    fill="#94a3b8"
+                    style="font-size: 9px; font-family: Montserrat, sans-serif"
+                  >
+                    N
+                  </text>
+                  <text
+                    x="28"
+                    y="48"
+                    text-anchor="middle"
+                    fill="#94a3b8"
+                    style="font-size: 9px; font-family: Montserrat, sans-serif"
+                  >
+                    S
+                  </text>
+                  <path
+                    d="M28 14 L33 28 L28 42 L23 28 Z"
+                    fill="#f97316"
+                  />
+                  <path
+                    d="M28 14 L28 42 M23 28 L33 28"
+                    stroke="#fff"
+                    stroke-width="0.9"
+                    opacity="0.9"
+                  />
+                </g>
+                <defs>
+                  <linearGradient
+                    id="destinoGrad"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="0%"
+                  >
+                    <stop offset="0%" stop-color="#fef3c7" />
+                    <stop offset="55%" stop-color="#fb923c" />
+                    <stop offset="100%" stop-color="#ea580c" />
+                  </linearGradient>
+                  <linearGradient id="compassRing" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop stop-color="#fb923c" />
+                    <stop offset="1" stop-color="#fef08a" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <h1
+              class="mt-6 font-sans text-[clamp(1.75rem,4.5vw,2.85rem)] font-extrabold leading-tight tracking-tight text-white"
+              data-scroll="slide-right"
+            >
+              Uma Nova Estação está chegando
+            </h1>
+            <p
+              class="mt-4 max-w-lg text-[0.95rem] font-medium text-white/90 sm:text-base"
+              data-scroll="blur"
+            >
+              Depois do Extraordinário, é hora de viver uma Nova Estação!
+            </p>
+            <p
+              class="mt-5 flex flex-wrap items-center gap-2 text-sm font-medium text-white"
+              data-scroll="fade"
+            >
+              <span class="text-lg leading-none" aria-hidden="true">📅</span>
+              <span>28 e 29 de agosto | Rio de Janeiro-RJ</span>
+            </p>
+            <a
+              href="#cadastro"
+              class="btn-neon mt-8 inline-flex rounded-md px-7 py-4 text-xs font-extrabold uppercase tracking-wide text-black no-underline sm:text-sm"
+              data-scroll="zoom"
+            >
+              Quero ser avisado do 1º Lote
+            </a>
+          </div>
+
+          <div class="relative flex flex-col items-center lg:items-end" data-scroll="slide-left">
+            <div
+              class="mb-4 flex max-w-full flex-wrap justify-center gap-x-5 gap-y-2 text-[10px] font-bold uppercase tracking-wider text-white/90 sm:gap-x-6 sm:text-[11px]"
+            >
+              <span class="flex flex-col items-center gap-1"
+                ><img
+                  src="https://flagcdn.com/w40/cl.png"
+                  alt=""
+                  width="28"
+                  height="20"
+                  class="rounded-sm object-cover ring-1 ring-white/30"
+                />Victor Hugo</span
+              >
+              <span class="flex flex-col items-center gap-1"
+                ><img
+                  src="https://flagcdn.com/w40/gt.png"
+                  alt=""
+                  width="28"
+                  height="20"
+                  class="rounded-sm object-cover ring-1 ring-white/30"
+                />Cash Luna</span
+              >
+              <span class="flex flex-col items-center gap-1"
+                ><img
+                  src="https://flagcdn.com/w40/us.png"
+                  alt=""
+                  width="28"
+                  height="20"
+                  class="rounded-sm object-cover ring-1 ring-white/30"
+                />T.D. Jakes</span
+              >
+              <span class="flex flex-col items-center gap-1"
+                ><img
+                  src="https://flagcdn.com/w40/br.png"
+                  alt=""
+                  width="28"
+                  height="20"
+                  class="rounded-sm object-cover ring-1 ring-white/30"
+                />Tiago Brunet</span
+              >
+              <span class="flex flex-col items-center gap-1"
+                ><img
+                  src="https://flagcdn.com/w40/ar.png"
+                  alt=""
+                  width="28"
+                  height="20"
+                  class="rounded-sm object-cover ring-1 ring-white/30"
+                />Ronny Oliveira</span
+              >
+            </div>
+            <div class="relative w-full max-w-lg lg:max-w-none">
+              <div
+                class="pointer-events-none absolute -inset-4 bg-[radial-gradient(ellipse_at_50%_30%,rgba(255,140,60,0.35),transparent_70%)]"
+                aria-hidden="true"
+              ></div>
+              <img
+                src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1000&q=80"
+                alt="Palestrantes em evento — ilustrativo"
+                width="1000"
+                height="1200"
+                class="relative z-[1] w-full rounded-2xl object-cover shadow-2xl ring-1 ring-white/10 [mask-image:linear-gradient(to_bottom,black_55%,transparent_100%)] sm:max-h-[min(70vh,520px)] sm:object-top lg:max-h-[min(78vh,600px)]"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sobre: imagem full-bleed + texto à direita -->
+      <section class="relative" id="sobre">
+        <div class="relative min-h-[560px] overflow-hidden lg:min-h-[640px]">
+          <img
+            src="https://images.unsplash.com/photo-1429962714451-bb934ecdc914?auto=format&fit=crop&w=2000&q=80"
+            alt=""
+            width="2000"
+            height="1333"
+            class="about-parallax-bg absolute left-0 right-0 top-[-7%] h-[115%] w-full object-cover object-[center_35%]"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-black/20 via-black/45 to-black/90 lg:from-transparent lg:via-black/55 lg:to-black/92"
+          ></div>
+          <div
+            class="relative z-10 mx-auto flex min-h-[560px] max-w-content justify-end px-4 py-14 sm:px-5 md:px-6 lg:min-h-[640px] lg:items-center lg:py-20"
+          >
+            <div
+              class="max-w-xl text-left lg:max-w-[440px] xl:max-w-[480px]"
+              data-scroll-stagger
+              data-stagger-ms="110"
+            >
+              <p class="text-sm font-medium text-white" data-scroll="fade">
+                O que é a Conferência Destino?
+              </p>
+              <h2
+                class="font-display mt-3 text-[clamp(1.35rem,3.2vw,1.85rem)] font-bold leading-snug text-bronze"
+                data-scroll="mask"
+              >
+                A maior ativação espiritual da América Latina
+              </h2>
+              <div
+                class="mt-6 space-y-4 text-sm text-white sm:text-[0.95rem]"
+                data-scroll="slide-up"
+              >
+                <p>
+                  A Conferência Destino acontece uma vez por ano, desde 2017. Um
+                  evento que já reuniu mais de 50 mil pessoas ao longo de 9
+                  edições.
+                </p>
+                <p>
+                  O principal objetivo da Conferência Destino é fazer uma
+                  ativação espiritual na vida das pessoas. Deus pode se fazer
+                  presente em qualquer lugar, mas Ele costuma se manifestar
+                  onde um altar foi consagrado a Ele. E na Conferência Destino é
+                  exatamente isso que acontece.
+                </p>
+                <p>
+                  Um ambiente profético é preparado para que a presença de Deus
+                  se manifeste, e para que possamos experimentar e viver o que
+                  Ele tem preparado para nós.
+                </p>
+                <p>
+                  Grandes pregadores dessa geração, do Brasil e do mundo, todos
+                  os anos, trazem uma palavra vinda diretamente do céu, e que
+                  tem transformado milhares de vidas.
+                </p>
+              </div>
+              <p
+                class="mt-8 font-sans text-base font-bold leading-snug text-white sm:text-lg"
+                data-scroll="blur"
+              >
+                Em ambientes proféticos, palavras se tornam decretos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Estatísticas: faixa laranja -->
+      <section
+        class="stats bg-gradient-to-br from-[#ff4e00] to-[#ec9f05] px-4 py-12 sm:py-14 md:py-16"
+      >
+        <div
+          class="mx-auto grid max-w-content grid-cols-2 gap-8 md:grid-cols-4 md:gap-4 lg:gap-8"
+          data-scroll-stagger
+          data-stagger-ms="100"
+        >
+          <div class="text-center" data-scroll="zoom">
+            <p
+              class="font-sans text-[clamp(2rem,5vw,3rem)] font-extrabold leading-none text-white"
+            >
+              <span class="stat__num" data-target="9">0</span>
+            </p>
+            <p class="mt-2 text-sm font-semibold text-white">Edições</p>
+          </div>
+          <div class="text-center" data-scroll="zoom">
+            <p
+              class="font-sans text-[clamp(2rem,5vw,3rem)] font-extrabold leading-none text-white"
+            >
+              +<span class="stat__num" data-target="50">0</span>K
+            </p>
+            <p class="mt-2 text-sm font-semibold text-white">Vidas Impactadas</p>
+          </div>
+          <div class="text-center" data-scroll="zoom">
+            <p
+              class="font-sans text-[clamp(2rem,5vw,3rem)] font-extrabold leading-none text-white tabular-nums"
+            >
+              2017
+            </p>
+            <p class="mt-2 text-sm font-semibold text-white">Primeira Edição</p>
+          </div>
+          <div class="text-center" data-scroll="zoom">
+            <p
+              class="font-sans text-[clamp(2rem,5vw,3rem)] font-extrabold leading-none text-white"
+            >
+              <span class="stat__num" data-target="2">0</span> DIAS
+            </p>
+            <p class="mt-2 text-sm font-semibold text-white">
+              de Imersão Total
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pregadores: 5 colunas, bandeiras -->
+      <section class="bg-black px-4 py-14 sm:px-5 sm:py-16 md:px-6 md:py-24" id="pregadores">
+        <div class="mx-auto max-w-content">
+          <h2
+            class="text-center font-sans text-[clamp(1.1rem,2.8vw,1.65rem)] font-bold leading-snug text-bronze"
+            data-scroll="fade"
+          >
+            Pregadores do Brasil e do Mundo estarão presentes na edição de 2026
+          </h2>
+          <p
+            class="mx-auto mt-4 max-w-3xl text-center text-sm text-white/90 sm:text-base"
+            data-scroll="blur"
+          >
+            Pregadores do Brasil e do mundo que trarão palavras direto do coração
+            de Deus para o seu destino.
+          </p>
+
+          <div
+            class="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-10 lg:grid-cols-5 lg:gap-4 xl:gap-6"
+            data-scroll-stagger
+            data-stagger-ms="95"
+          >
+            <article class="text-center" data-scroll="slide-up">
+              <div class="relative mx-auto aspect-[3/4] max-w-[240px] overflow-hidden rounded-2xl ring-1 ring-white/15 sm:max-w-none">
+                <img
+                  src="https://flagcdn.com/w80/br.png"
+                  alt="Brasil"
+                  class="absolute left-3 top-3 z-10 w-9 rounded shadow-md ring-1 ring-black/20 sm:left-4 sm:top-4 sm:w-10"
+                  width="40"
+                  height="30"
+                />
+                <img
+                  src="images/speakers/tiago-brunet.jpg"
+                  alt="Tiago Brunet"
+                  width="400"
+                  height="533"
+                  class="h-full w-full object-cover object-top"
+                  loading="lazy"
+                />
+              </div>
+              <h3
+                class="mt-4 font-sans text-sm font-bold uppercase tracking-wide text-bronze sm:text-base"
+              >
+                Tiago Brunet
+              </h3>
+              <p class="mt-2 px-1 text-xs leading-relaxed text-white/85 sm:text-[0.8125rem]">
+                Idealizador da Conferência Destino. Fundador da Casa de Destino
+                e CEO do Instituto Destiny. Escritor best-seller e instrutor de
+                princípios milenares.
+              </p>
+            </article>
+
+            <article class="text-center" data-scroll="slide-up">
+              <div class="relative mx-auto aspect-[3/4] max-w-[240px] overflow-hidden rounded-2xl ring-1 ring-white/15 sm:max-w-none">
+                <img
+                  src="https://flagcdn.com/w80/us.png"
+                  alt="EUA"
+                  class="absolute left-3 top-3 z-10 w-9 rounded shadow-md ring-1 ring-black/20 sm:left-4 sm:top-4 sm:w-10"
+                  width="40"
+                  height="30"
+                />
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/TDJakesApr10_%28cropped%29.jpg/440px-TDJakesApr10_%28cropped%29.jpg"
+                  alt="T.D. Jakes"
+                  width="440"
+                  height="586"
+                  class="h-full w-full object-cover object-top"
+                  loading="lazy"
+                />
+              </div>
+              <h3
+                class="mt-4 font-sans text-sm font-bold uppercase tracking-wide text-bronze sm:text-base"
+              >
+                T.D. Jakes
+              </h3>
+              <p class="mt-2 px-1 text-xs leading-relaxed text-white/85 sm:text-[0.8125rem]">
+                Reconhecido mundialmente como um dos maiores comunicadores e
+                líderes de fé da atualidade, com mensagens de profundidade
+                espiritual e aplicabilidade prática.
+              </p>
+            </article>
+
+            <article class="text-center" data-scroll="slide-up">
+              <div class="relative mx-auto aspect-[3/4] max-w-[240px] overflow-hidden rounded-2xl ring-1 ring-white/15 sm:max-w-none">
+                <img
+                  src="https://flagcdn.com/w80/gt.png"
+                  alt="Guatemala"
+                  class="absolute left-3 top-3 z-10 w-9 rounded shadow-md ring-1 ring-black/20 sm:left-4 sm:top-4 sm:w-10"
+                  width="40"
+                  height="30"
+                />
+                <img
+                  src="images/speakers/cash-luna.jpg"
+                  alt="Cash Luna"
+                  width="400"
+                  height="533"
+                  class="h-full w-full object-cover object-top"
+                  loading="lazy"
+                />
+              </div>
+              <h3
+                class="mt-4 font-sans text-sm font-bold uppercase tracking-wide text-bronze sm:text-base"
+              >
+                Cash Luna
+              </h3>
+              <p class="mt-2 px-1 text-xs leading-relaxed text-white/85 sm:text-[0.8125rem]">
+                Referência internacional em esperança e transformação. Conhecido
+                por transmitir fé com ousadia e despertar pessoas para viverem
+                milagres no dia a dia.
+              </p>
+            </article>
+
+            <article class="text-center" data-scroll="slide-up">
+              <div class="relative mx-auto aspect-[3/4] max-w-[240px] overflow-hidden rounded-2xl ring-1 ring-white/15 sm:max-w-none">
+                <img
+                  src="https://flagcdn.com/w80/ar.png"
+                  alt="Argentina"
+                  class="absolute left-3 top-3 z-10 w-9 rounded shadow-md ring-1 ring-black/20 sm:left-4 sm:top-4 sm:w-10"
+                  width="40"
+                  height="30"
+                />
+                <img
+                  src="images/speakers/ronny-oliveira.jpg"
+                  alt="Ronny Oliveira"
+                  width="400"
+                  height="533"
+                  class="h-full w-full object-cover object-top"
+                  loading="lazy"
+                />
+              </div>
+              <h3
+                class="mt-4 font-sans text-sm font-bold uppercase tracking-wide text-bronze sm:text-base"
+              >
+                Ronny Oliveira
+              </h3>
+              <p class="mt-2 px-1 text-xs leading-relaxed text-white/85 sm:text-[0.8125rem]">
+                Voz profética que tem marcado gerações com palavras de revelação,
+                ativando destinos e liberando direcionamentos do coração de
+                Deus.
+              </p>
+            </article>
+
+            <article
+              class="text-center sm:col-span-2 sm:max-w-md sm:justify-self-center lg:col-span-1"
+              data-scroll="slide-up"
+            >
+              <div class="relative mx-auto aspect-[3/4] max-w-[240px] overflow-hidden rounded-2xl ring-1 ring-white/15 sm:max-w-none">
+                <img
+                  src="https://flagcdn.com/w80/cl.png"
+                  alt="Chile"
+                  class="absolute left-3 top-3 z-10 w-9 rounded shadow-md ring-1 ring-black/20 sm:left-4 sm:top-4 sm:w-10"
+                  width="40"
+                  height="30"
+                />
+                <img
+                  src="images/speakers/victor-hugo.jpg"
+                  alt="Victor Hugo"
+                  width="400"
+                  height="533"
+                  class="h-full w-full object-cover object-top"
+                  loading="lazy"
+                />
+              </div>
+              <h3
+                class="mt-4 font-sans text-sm font-bold uppercase tracking-wide text-bronze sm:text-base"
+              >
+                Victor Hugo
+              </h3>
+              <p class="mt-2 px-1 text-xs leading-relaxed text-white/85 sm:text-[0.8125rem]">
+                Desperta pessoas a viverem um propósito extraordinário na
+                presença de Deus, conduzindo multidões a uma vida de entrega e
+                paixão pelo Reino.
+              </p>
+            </article>
+          </div>
+
+          <div class="mt-12 flex justify-center sm:mt-14">
+            <a
+              href="#cadastro"
+              class="btn-neon rounded-md px-10 py-4 text-xs font-extrabold uppercase tracking-wide text-black no-underline sm:text-sm"
+              data-scroll="zoom"
+              >Quero entrar na lista VIP</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Scroll horizontal + snap -->
+      <section
+        class="border-y border-white/10 bg-[#050505] py-12 md:py-16"
+        aria-label="Experiências"
+      >
+        <div class="mx-auto max-w-content px-4 md:px-6">
+          <h2
+            class="font-display text-xl font-bold text-bronze md:text-2xl"
+            data-scroll="mask"
+          >
+            O que te espera na Conferência
+          </h2>
+          <p class="mt-2 max-w-lg text-sm text-white/65" data-scroll="fade">
+            Role na horizontal para explorar os destaques do evento.
+          </p>
+        </div>
+        <div
+          class="se-horizontal__scroller mt-8 flex gap-4 overflow-x-auto px-4 pb-4 pt-2 md:gap-6 md:px-6 snap-x snap-mandatory"
+        >
+          <article
+            class="snap-center shrink-0 w-[min(88vw,320px)] overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-[#161616] to-black p-6 md:p-7"
+            data-scroll="zoom"
+          >
+            <p class="text-xs font-bold uppercase tracking-widest text-neon">
+              01
+            </p>
+            <h3 class="mt-3 font-display text-lg font-bold text-white">
+              Louvor &amp; adoração
+            </h3>
+            <p class="mt-2 text-sm text-white/70">
+              Noites de celebração com milhares de vozes em unidade.
+            </p>
+          </article>
+          <article
+            class="snap-center shrink-0 w-[min(88vw,320px)] overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-[#161616] to-black p-6 md:p-7"
+            data-scroll="zoom"
+          >
+            <p class="text-xs font-bold uppercase tracking-widest text-neon">
+              02
+            </p>
+            <h3 class="mt-3 font-display text-lg font-bold text-white">
+              Palavras proféticas
+            </h3>
+            <p class="mt-2 text-sm text-white/70">
+              Mensagens que marcam destinos e liberam direção.
+            </p>
+          </article>
+          <article
+            class="snap-center shrink-0 w-[min(88vw,320px)] overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-[#161616] to-black p-6 md:p-7"
+            data-scroll="zoom"
+          >
+            <p class="text-xs font-bold uppercase tracking-widest text-neon">
+              03
+            </p>
+            <h3 class="mt-3 font-display text-lg font-bold text-white">
+              Comunidade global
+            </h3>
+            <p class="mt-2 text-sm text-white/70">
+              Brasil e o mundo reunidos na mesma fé e expectativa.
+            </p>
+          </article>
+          <article
+            class="snap-center shrink-0 w-[min(88vw,320px)] overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-[#161616] to-black p-6 md:p-7"
+            data-scroll="zoom"
+          >
+            <p class="text-xs font-bold uppercase tracking-widest text-neon">
+              04
+            </p>
+            <h3 class="mt-3 font-display text-lg font-bold text-white">
+              Rio de Janeiro
+            </h3>
+            <p class="mt-2 text-sm text-white/70">
+              Farmasi Arena — estrutura de arena para viver cada momento.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Ticker laranja (texto preto) -->
+      <div
+        class="overflow-hidden bg-gradient-to-r from-[#ff6a1a] via-[#ff5500] to-[#e88800] py-3"
+        aria-hidden="true"
+      >
+        <div
+          class="marquee-ticker flex w-max gap-8 text-xs font-bold uppercase tracking-wide text-black sm:text-sm"
+        >
+          <span class="shrink-0"
+            >28 E 29 DE AGOSTO • FARMASI ARENA | RIO DE JANEIRO-RJ •</span
+          >
+          <span class="shrink-0"
+            >28 E 29 DE AGOSTO • FARMASI ARENA | RIO DE JANEIRO-RJ •</span
+          >
+          <span class="shrink-0"
+            >28 E 29 DE AGOSTO • FARMASI ARENA | RIO DE JANEIRO-RJ •</span
+          >
+        </div>
+      </div>
+
+      <!-- Lotes + painel sticky -->
+      <section
+        class="bg-black px-4 py-12 sm:px-5 sm:py-14 md:px-6 md:py-20"
+        id="ingressos"
+      >
+        <div class="mx-auto max-w-content">
+          <h2
+            class="font-display text-center text-[clamp(1.5rem,3.8vw,2.35rem)] font-bold text-gold"
+            data-scroll="mask-up"
+          >
+            Lotes com preços históricos abrindo em breve
+          </h2>
+          <p
+            class="mx-auto mt-4 max-w-lg text-center text-sm text-white sm:text-base"
+            data-scroll="fade"
+          >
+            Cadastre-se para ser um dos primeiros a saber quando os lotes
+            abrirem e garantir o melhor valor.
+          </p>
+
+          <div
+            class="mt-10 lg:grid lg:grid-cols-[1fr_min(100%,280px)] lg:items-start lg:gap-10 xl:gap-12"
+          >
+            <div>
+          <div
+            class="grid gap-6 md:grid-cols-3 md:gap-5 lg:gap-6 xl:gap-8"
+            data-scroll-stagger
+            data-stagger-ms="90"
+          >
+            <article
+              class="flex flex-col rounded-2xl border border-bronze/35 bg-elevated/50 p-6 ring-1 ring-white/5"
+              data-scroll="slide-up"
+            >
+              <p class="font-display text-lg font-bold text-bronze">
+                Ingresso VIP
+              </p>
+              <ul class="mt-4 flex-1 list-disc space-y-1 pl-5 text-sm text-white/80">
+                <li>Acesso aos 2 dias da Conferência</li>
+                <li>Assento na Área VIP</li>
+              </ul>
+              <p class="mt-4 text-[0.7rem] font-semibold uppercase tracking-wider text-white/55">
+                Preço promocional do 1º lote
+              </p>
+              <p class="font-display mt-1 text-2xl font-bold text-white sm:text-3xl">
+                R$&nbsp;1.497,00
+              </p>
+              <a
+                href="#cadastro"
+                class="mt-5 inline-flex w-full items-center justify-center rounded-md border border-white/25 py-3 text-sm font-bold text-white no-underline transition hover:border-white/50 hover:no-underline"
+                >Notificar quando abrir</a
+              >
+            </article>
+
+            <article
+              class="relative flex flex-col rounded-2xl border-2 border-bronze/80 bg-elevated/80 p-6 shadow-[0_0_0_1px_rgba(197,160,89,0.2),0_20px_50px_rgba(0,0,0,0.5)] md:-mt-2 md:mb-2 md:scale-[1.02]"
+              data-scroll="slide-up"
+            >
+              <p class="font-display text-lg font-bold text-bronze">
+                Ingresso Ouro
+              </p>
+              <ul class="mt-4 flex-1 list-disc space-y-1 pl-5 text-sm text-white/80">
+                <li>Acesso aos 2 dias da Conferência</li>
+                <li>Assento na Área Ouro</li>
+              </ul>
+              <p class="mt-4 text-[0.7rem] font-semibold uppercase tracking-wider text-white/55">
+                Preço promocional do 1º lote
+              </p>
+              <p class="font-display mt-1 text-2xl font-bold text-white sm:text-3xl">
+                R$&nbsp;297,00
+              </p>
+              <a
+                href="#cadastro"
+                class="btn-neon mt-5 inline-flex w-full items-center justify-center rounded-md py-3.5 text-sm font-extrabold text-black no-underline hover:no-underline"
+                >Notificar quando abrir</a
+              >
+            </article>
+
+            <article
+              class="flex flex-col rounded-2xl border border-white/15 bg-elevated/50 p-6"
+              data-scroll="slide-up"
+            >
+              <p class="font-display text-lg font-bold text-bronze">
+                Ingresso Bronze
+              </p>
+              <ul class="mt-4 flex-1 list-disc space-y-1 pl-5 text-sm text-white/80">
+                <li>Acesso aos 2 dias da Conferência</li>
+                <li>Assento na Área Bronze</li>
+              </ul>
+              <p class="mt-4 text-[0.7rem] font-semibold uppercase tracking-wider text-white/55">
+                Preço promocional do 1º lote
+              </p>
+              <p class="font-display mt-1 text-2xl font-bold text-white sm:text-3xl">
+                R$&nbsp;97,00
+              </p>
+              <a
+                href="#cadastro"
+                class="mt-5 inline-flex w-full items-center justify-center rounded-md border border-white/25 py-3 text-sm font-bold text-white no-underline transition hover:border-white/50 hover:no-underline"
+                >Notificar quando abrir</a
+              >
+            </article>
+          </div>
+
+          <div
+            class="mx-auto mt-10 max-w-2xl rounded-2xl border border-bronze/25 bg-bronze/10 p-6 text-center sm:mt-14 sm:p-8"
+            data-scroll="fade"
+          >
+            <h3 class="font-display text-lg font-semibold text-white sm:text-xl">
+              Os lotes têm vagas limitadas
+            </h3>
+            <p class="mt-3 text-sm text-white/75 sm:text-base">
+              Quem se cadastrar primeiro na lista VIP receberá o aviso antes de
+              todo mundo e terá prioridade na hora de garantir o ingresso do 1º
+              lote.
+            </p>
+          </div>
+            </div>
+
+            <aside
+              class="scroll-sticky-panel mt-10 hidden rounded-2xl border border-bronze/35 bg-gradient-to-b from-[#121212] via-black to-black p-6 shadow-[0_20px_60px_rgba(0,0,0,0.45)] lg:mt-0 lg:block"
+              data-scroll="slide-left"
+            >
+              <p class="text-[10px] font-bold uppercase tracking-[0.25em] text-bronze">
+                Resumo
+              </p>
+              <p class="mt-3 font-display text-lg font-bold text-white">
+                28 e 29 de agosto · 2026
+              </p>
+              <p class="mt-2 text-sm text-white/70">
+                Farmasi Arena, Rio de Janeiro. Garanta prioridade no 1º lote
+                cadastrando-se na lista VIP.
+              </p>
+              <a
+                href="#cadastro"
+                class="btn-neon mt-5 flex w-full items-center justify-center rounded-md py-3.5 text-center text-xs font-extrabold uppercase tracking-wide text-black no-underline"
+                >Lista VIP</a
+              >
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="border-t border-white/10 bg-[#0a0a0a] px-4 py-14 sm:px-5 md:px-6 md:py-20" id="cadastro">
+        <div class="mx-auto max-w-narrow" data-scroll="blur">
+          <h2 class="font-display text-center text-2xl font-bold text-white sm:text-3xl">
+            Cadastre-se agora
+          </h2>
+          <p class="mt-3 text-center text-sm text-white/75 sm:text-base">
+            Receba o aviso exclusivo quando os ingressos do 1º lote — com os
+            melhores preços — forem liberados.
+          </p>
+          <form class="mt-8 flex flex-col gap-4" id="form-lead" action="#" method="post">
+            <label class="flex flex-col gap-2">
+              <span class="text-sm font-medium text-white/65">Nome</span>
+              <input
+                type="text"
+                name="nome"
+                autocomplete="name"
+                required
+                placeholder="Seu nome"
+                class="w-full rounded-lg border border-white/15 bg-black px-4 py-3.5 font-sans text-white placeholder:text-white/30 outline-none transition focus:border-bronze/50 focus:ring-2 focus:ring-bronze/20"
+              />
+            </label>
+            <label class="flex flex-col gap-2">
+              <span class="text-sm font-medium text-white/65">E-mail</span>
+              <input
+                type="email"
+                name="email"
+                autocomplete="email"
+                required
+                placeholder="seu@email.com"
+                class="w-full rounded-lg border border-white/15 bg-black px-4 py-3.5 font-sans text-white placeholder:text-white/30 outline-none transition focus:border-bronze/50 focus:ring-2 focus:ring-bronze/20"
+              />
+            </label>
+            <label class="flex flex-col gap-2">
+              <span class="text-sm font-medium text-white/65">Telefone</span>
+              <input
+                type="tel"
+                name="telefone"
+                autocomplete="tel"
+                required
+                placeholder="(00) 00000-0000"
+                class="w-full rounded-lg border border-white/15 bg-black px-4 py-3.5 font-sans text-white placeholder:text-white/30 outline-none transition focus:border-bronze/50 focus:ring-2 focus:ring-bronze/20"
+              />
+            </label>
+            <button
+              type="submit"
+              class="btn-neon mt-2 w-full rounded-md py-4 text-sm font-extrabold uppercase tracking-wide text-black"
+            >
+              Quero ser avisado do 1º Lote
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-white/10 bg-black px-4 py-14 sm:px-5 md:px-6">
+      <div
+        class="mx-auto flex max-w-content flex-col items-center text-center"
+        data-scroll="fade"
+      >
+        <p class="text-[10px] font-medium uppercase tracking-[0.35em] text-white sm:text-xs">
+          Conferência 2026
+        </p>
+        <div class="mt-5 scale-90 sm:scale-100" aria-hidden="true">
+          <svg
+            class="h-14 w-auto text-white sm:h-16"
+            viewBox="0 0 300 52"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <text
+              x="0"
+              y="42"
+              fill="currentColor"
+              style="font-family: Montserrat, sans-serif; font-size: 48px; font-weight: 800"
+            >
+              D
+            </text>
+            <text
+              x="36"
+              y="42"
+              fill="url(#footGrad)"
+              style="font-family: Montserrat, sans-serif; font-size: 48px; font-weight: 800"
+            >
+              estin
+            </text>
+            <g transform="translate(188, 2)">
+              <circle
+                cx="22"
+                cy="22"
+                r="20"
+                stroke="url(#footRing)"
+                stroke-width="1.5"
+                stroke-dasharray="2 3"
+                fill="rgba(0,0,0,0.2)"
+              />
+              <text
+                x="22"
+                y="9"
+                text-anchor="middle"
+                fill="#94a3b8"
+                style="font-size: 7px; font-family: Montserrat, sans-serif"
+              >
+                N
+              </text>
+              <text
+                x="22"
+                y="39"
+                text-anchor="middle"
+                fill="#94a3b8"
+                style="font-size: 7px; font-family: Montserrat, sans-serif"
+              >
+                S
+              </text>
+              <path d="M22 10 L26 22 L22 34 L18 22 Z" fill="#fb923c" />
+            </g>
+            <defs>
+              <linearGradient id="footGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#fef3c7" />
+                <stop offset="100%" stop-color="#ea580c" />
+              </linearGradient>
+              <linearGradient id="footRing" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop stop-color="#fdba74" />
+                <stop offset="1" stop-color="#ea580c" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <p class="mt-5 text-xs font-bold uppercase tracking-[0.2em] text-white sm:text-sm">
+          Uma Nova Estação
+        </p>
+        <p class="mt-10 max-w-xl text-[11px] leading-relaxed text-white/65 sm:text-xs">
+          © 2026 Conferência Destino - Casa de Destino - Todos os direitos
+          reservados Farmasi Arena - Rio de Janeiro-RJ - 28 e 29 de agosto de
+          2026
+        </p>
+      </div>
+    </footer>
+
+    <script src="scroll-effects.js"></script>
+    <script>
+      (function () {
+        var nav = document.getElementById("main-nav");
+        var toggle = document.getElementById("nav-toggle");
+        function setOpen(open) {
+          if (!nav || !toggle) return;
+          nav.classList.toggle("main-nav--open", open);
+          toggle.setAttribute("aria-expanded", open ? "true" : "false");
+          toggle.setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu");
+          toggle.classList.toggle("nav-toggle--open", open);
+        }
+        if (toggle && nav) {
+          toggle.addEventListener("click", function () {
+            setOpen(!nav.classList.contains("main-nav--open"));
+          });
+          nav.querySelectorAll("a").forEach(function (link) {
+            link.addEventListener("click", function () {
+              setOpen(false);
+            });
+          });
+          window.addEventListener("resize", function () {
+            if (window.matchMedia("(min-width: 768px)").matches) setOpen(false);
+          });
+        }
+        function animateStat(el) {
+          var target = parseInt(el.getAttribute("data-target"), 10);
+          if (isNaN(target)) return;
+          var duration = 1200;
+          var start = performance.now();
+          function frame(now) {
+            var t = Math.min((now - start) / duration, 1);
+            var eased = 1 - Math.pow(1 - t, 3);
+            el.textContent = Math.round(target * eased);
+            if (t < 1) requestAnimationFrame(frame);
+            else el.textContent = target;
+          }
+          requestAnimationFrame(frame);
+        }
+        var io = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (!entry.isIntersecting) return;
+              entry.target
+                .querySelectorAll(".stat__num[data-target]")
+                .forEach(animateStat);
+              io.unobserve(entry.target);
+            });
+          },
+          { threshold: 0.2 }
+        );
+        var stats = document.querySelector(".stats");
+        if (stats) io.observe(stats);
+        var form = document.getElementById("form-lead");
+        if (form) {
+          form.addEventListener("submit", function (e) {
+            e.preventDefault();
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>
